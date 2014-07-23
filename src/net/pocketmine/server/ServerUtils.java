@@ -121,7 +121,7 @@ public final class ServerUtils {
 
 		String[] serverCmd = { getAppDirectory() + "/php",
 				// getAppDirectory() + "/php_data/PocketMine-MP.php"
-				getDataDirectory() + "/PocketMine-MP.php" };
+				getDataDirectory() + "src/pocketmine/PocketMine-MP.php" };
 
 		try {
 			serverProc = (new ProcessBuilder(serverCmd)).redirectErrorStream(
@@ -386,7 +386,7 @@ public final class ServerUtils {
 	public static boolean checkIfInstalled() {
 
 		File mPhp = new File(getAppDirectory() + "/php");
-		File mPM = new File(getDataDirectory() + "/PocketMine-MP.php");
+		File mPM = new File(getDataDirectory() + "src/pocketmine/PocketMine-MP.php");
 
 		int saveVer = HomeActivity.prefs != null ? HomeActivity.prefs.getInt(
 				"filesVersion", 0) : 0;
