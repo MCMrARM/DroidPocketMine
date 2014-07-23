@@ -56,7 +56,7 @@ public class VersionManagerActivity extends SherlockActivity {
 
 		if (install
 				&& new File(ServerUtils.getDataDirectory()
-						+ "/PocketMine-MP.php").isFile()) {
+						+ "src/pocketmine/PocketMine-MP.php").isFile()) {
 			final Button skipBtn = (Button) findViewById(R.id.skipInstallVer);
 			skipBtn.setVisibility(View.VISIBLE);
 			skipBtn.setOnClickListener(new OnClickListener() {
